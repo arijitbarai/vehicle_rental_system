@@ -9,4 +9,5 @@ add_executable(untitled main.cpp
         application.h
         application.cpp
         trip.cpp
-        string_helper.cpp)
+        string_helper.cpp
+        date.cpp)

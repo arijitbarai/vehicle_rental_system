@@ -4,7 +4,7 @@
 #include "date.h"
 #include "string_helper.h"
 
-const char *const DELIMITER = '/';
+const char DELIMITER = '/';
 
 Date ::Date() {
     time_t now = time(NULL);
@@ -42,7 +42,7 @@ bool Date  ::isEmpty() const {
 
 string Date ::toString() const {
     if (this ->empty){
-        return "";
+        return " ";
     }
     stringstream ss;
     ss << this ->date.tm_mday << "/" << this->date.tm_mon+1 << "/" << this->date.tm_year +1900;
@@ -65,7 +65,7 @@ Date Date ::operator+(int days) {
     return newDate;
 }
 
-bool Date ::operator>(Date date) const {
+bool Date ::operator >(Date date) const {
 
     if (this->isEmpty() || date.isEmpty()){
         return false;
@@ -76,11 +76,11 @@ bool Date ::operator>(Date date) const {
     int dayDiff = this->date.tm_mday - date.date.tm_mday;
 
     if (yearDiff != 0){
-        return yearDiff;
+        return yearDiff > 0;
     } else if (monthDiff != 0){
-        return monthDiff;
+        return monthDiff > 0;
     } else{
-        return dayDiff;
+        return dayDiff > 0;
     }
 }
 

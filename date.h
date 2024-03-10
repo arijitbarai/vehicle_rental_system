@@ -18,7 +18,7 @@ private:
     bool empty;
 
 public:
-    Date(string date);
+    Date (string date);
 
     Date( );
 

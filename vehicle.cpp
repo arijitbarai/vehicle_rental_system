@@ -4,7 +4,7 @@
 #include "vehicle.h"
 #include "string_helper.h"
 
-const char *const DELIMITER = ';';
+const char DELIMITER = ';';
 
 Vehicle ::Vehicle( string registrationNumber, VehicleType type, int seats, string companyName, double pricePerKm, Date PUCExpirationDate, long recordId) : Storable(recordId) {
 
@@ -65,7 +65,7 @@ void Vehicle ::display() const {
 
 string Vehicle ::toString() const {
     stringstream ss;
-    ss  << recoedId << DELIMITER
+    ss  << recordId << DELIMITER
         << registrationNumber << DELIMITER
         << type << DELIMITER
         << seats << DELIMITER

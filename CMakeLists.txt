@@ -10,4 +10,5 @@ add_executable(untitled main.cpp
         application.cpp
         trip.cpp
         string_helper.cpp
-        date.cpp)
+        date.cpp
+        vehicle.cpp)

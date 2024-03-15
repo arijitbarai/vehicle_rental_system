@@ -36,6 +36,6 @@ public:
     void setPricePerKm(double newPrice);
     void display() const;
     string toString() const;
-    void setDateFrom(Storable*s);
+    void setDataFrom(Storable*s);
 };
 #endif //APPLICATION_VEHICLE_H

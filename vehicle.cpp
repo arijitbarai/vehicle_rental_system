@@ -70,12 +70,12 @@ string Vehicle ::toString() const {
         << type << DELIMITER
         << seats << DELIMITER
         << companyName << DELIMITER
-        << toString( pricePerKm ) << DELIMITER
+        << to_string( pricePerKm ) << DELIMITER
         << PUCExpirationDate.toString();
     return ss.str();
 }
 
-void Vehicle ::setDateFrom(Storable *s) {
+void Vehicle ::setDataFrom(Storable *s) {
     Vehicle * v = dynamic_cast<Vehicle*> (s);
 
     if (v){

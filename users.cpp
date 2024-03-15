@@ -8,9 +8,9 @@
 
 using namespace std;
 
-const char *const DELIMITER = ';';
+const char DELIMITER = ';';
 
-User ::User(std::string name, std::string contact, std::string email, long recordId) :Storable(recordId){
+User ::User(string name, string contact, string email, long recordId) :Storable(recordId){
 
     this -> name = name;
     this -> contact = contact;
@@ -23,7 +23,7 @@ string User ::getName() const {
 string User ::getContact() const {
     return this ->contact;
 }
-string User ::getEmail() const {
+string  User ::getEmail() const {
     return this -> email;
 }
 
@@ -61,3 +61,5 @@ void User ::setDataFrom(Storable *s) {
         this -> email = user -> email;
     }
 }
+
+

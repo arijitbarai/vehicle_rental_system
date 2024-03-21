@@ -2,8 +2,7 @@
 #define storable_cpp
 #include "serializable.cpp"
 
-#include <string>
-#include <iostream>
+
 
 using namespace std;
 
@@ -18,6 +17,6 @@ public:
     virtual void setDataForm(Storable * s) = 0;
 
     template<class T> friend class Table;
-    friend class  Dtabase;
+    friend class  Database;
 };
 #endif

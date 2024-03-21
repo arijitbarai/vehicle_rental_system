@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-const char *const DELIMITER = ";";
+const char DELIMITER = ";";
 
 Trip ::Trip(const Vehicle *vehicle, const User *user, Date startDate, Date endDate, long recordId, long startReading,
             long endReading, double fare, bool isCompleted): Storable(recordId){
